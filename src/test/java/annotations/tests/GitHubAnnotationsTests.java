@@ -13,7 +13,6 @@ import org.junit.jupiter.api.Test;
 @DisplayName("Issue test with annotation")
 public class GitHubAnnotationsTests extends BaseTest {
 
-    private final String BASE_URL = "https://github.com";
     private final static String REPOSITORY = "nastiykr/qa_guru_5_5_allure_reports";
     private final static String TAB = "Issue";
 
@@ -27,7 +26,7 @@ public class GitHubAnnotationsTests extends BaseTest {
     @Link(name = "GutHubURL", url = "https://github.com")
     @DisplayName("Search issue tab")
     void searchIssueTabTest() {
-        gitHubPage.openPage(BASE_URL);
+        gitHubPage.openPage("");
         gitHubPage.search(REPOSITORY);
         gitHubPage.goToRepository(REPOSITORY);
         gitHubPage.checkData(TAB);

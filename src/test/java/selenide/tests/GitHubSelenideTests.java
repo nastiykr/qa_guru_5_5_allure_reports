@@ -5,7 +5,6 @@ import selenide.pages.GitHubPage;
 
 public class GitHubSelenideTests extends BaseTest {
 
-    private final String BASE_URL = "https://github.com";
     private final static String REPOSITORY = "nastiykr/qa_guru_5_5_allure_reports";
     private final static String TAB = "Issue";
 
@@ -13,9 +12,9 @@ public class GitHubSelenideTests extends BaseTest {
 
     @Test
     void searchIssueTabTest() {
-        gitHubPage.openPage(BASE_URL);
-        gitHubPage.search(REPOSITORY);
-        gitHubPage.goToRepository(REPOSITORY);
-        gitHubPage.checkData(TAB);
+        gitHubPage.openPage("")
+                .search(REPOSITORY)
+                .goToRepository(REPOSITORY)
+                .checkData(TAB);
     }
 }

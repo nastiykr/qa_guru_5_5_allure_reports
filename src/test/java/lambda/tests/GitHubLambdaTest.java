@@ -12,7 +12,6 @@ import static io.qameta.allure.Allure.step;
 
 public class GitHubLambdaTest extends BaseTest {
 
-    private final String BASE_URL = "https://github.com";
     private final static String REPOSITORY = "nastiykr/qa_guru_5_5_allure_reports";
     private final static String TAB = "Issue";
 
@@ -20,8 +19,8 @@ public class GitHubLambdaTest extends BaseTest {
     void searchIssueTabTest() {
         step("Open main page", (step) ->
         {
-            step.parameter("url", BASE_URL);
-            open(BASE_URL);
+            step.parameter("url", "");
+            open("");
         });
 
 
@@ -29,8 +28,7 @@ public class GitHubLambdaTest extends BaseTest {
         {
             step.parameter("url", REPOSITORY);
             $(".header-search-input").click();
-            $(".header-search-input").sendKeys(REPOSITORY);
-            $(".header-search-input").pressEnter();
+            $(".header-search-input").val(REPOSITORY).pressEnter();
         });
 
 

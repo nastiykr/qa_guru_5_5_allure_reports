@@ -8,5 +8,6 @@ public class BaseTest {
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
+        Configuration.baseUrl = "https://github.com";
     }
 }

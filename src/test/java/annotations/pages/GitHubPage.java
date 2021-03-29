@@ -17,8 +17,7 @@ public class GitHubPage {
     @Step("Search {repository}")
     public void search(String repository) {
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys(repository);
-        $(".header-search-input").pressEnter();
+        $(".header-search-input").val(repository).pressEnter();
     }
 
     @Step("Move to {repository}")

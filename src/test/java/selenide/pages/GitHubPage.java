@@ -9,23 +9,26 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class GitHubPage {
 
-    public void openPage(String url) {
+    public GitHubPage openPage(String url) {
         open(url);
+        return this;
     }
 
-    public void search(String repository) {
+    public GitHubPage search(String repository) {
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys(repository);
-        $(".header-search-input").pressEnter();
+        $(".header-search-input").val(repository).pressEnter();
+        return this;
     }
 
-    public void goToRepository(String repository) {
+    public GitHubPage goToRepository(String repository) {
         $(By.linkText(repository)).click();
+        return this;
     }
 
-    public void checkData(String tab) {
+    public GitHubPage checkData(String tab) {
         $(withText(tab)).click();
         $(".blankslate h3").shouldHave(text("Welcome to issues!"));
+        return this;
 
     }
 }
