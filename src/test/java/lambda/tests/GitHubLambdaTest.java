@@ -1,8 +1,8 @@
 package lambda.tests;
 
+import configuration.BaseTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import selenide.tests.BaseTest;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.withText;

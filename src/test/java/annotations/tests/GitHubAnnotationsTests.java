@@ -1,6 +1,7 @@
 package annotations.tests;
 
 import annotations.pages.GitHubPage;
+import configuration.BaseTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Link;
 import io.qameta.allure.Owner;

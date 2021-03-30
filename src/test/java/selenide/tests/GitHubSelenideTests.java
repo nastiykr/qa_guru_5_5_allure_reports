@@ -1,5 +1,6 @@
 package selenide.tests;
 
+import configuration.BaseTest;
 import org.junit.jupiter.api.Test;
 import selenide.pages.GitHubPage;
 
